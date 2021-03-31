@@ -5,6 +5,7 @@ metadata:
   name: homeassistantservice
   labels:
     app: homeassistant
+  namespace: homeassistant
 spec:
   type: NodePort
   ports:
