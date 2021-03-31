@@ -21,6 +21,7 @@ spec:
         image: homeassistant/home-assistant:2021.3.4
         ports:
         - containerPort: 8123
+          name: http
         volumeMounts:
         - mountPath: /config
           name: config
