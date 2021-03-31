@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: homeassistantdeployment
+  name: homeassistant
   labels:
     app: homeassistant
   namespace: homeassistant
