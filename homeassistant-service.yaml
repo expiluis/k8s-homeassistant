@@ -7,10 +7,14 @@ metadata:
     app: homeassistant
   namespace: homeassistant
 spec:
-  type: NodePort
+#  type: NodePort
+#  ports:
+#  - port: 80
+#    targetPort: 8123
+#    nodePort: 30123
   ports:
-  - port: 80
-    targetPort: 8123
-    nodePort: 30123
+  - name: http
+    port: 8123
+    targetPort: http
   selector:
     app: homeassistant
