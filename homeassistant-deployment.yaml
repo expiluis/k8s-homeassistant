@@ -22,10 +22,10 @@ spec:
         ports:
         - containerPort: 8123
           name: http
-        volumeMounts:
-        - mountPath: /config
-          name: config
-      volumes:
-        - name: config
-          hostPath:
-            path: config
+#        volumeMounts:
+#        - mountPath: /config
+#          name: config
+#      volumes:
+#        - name: config
+#          hostPath:
+#            path: config
