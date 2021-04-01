@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "key": "person",
+    "data": {
+        "items": [
+            {
+                "name": "expiluis",
+                "user_id": "7dc19f80718f4dd6af7f20f35571155b",
+                "device_trackers": [],
+                "id": "expiluis"
+            }
+        ]
+    }
+}

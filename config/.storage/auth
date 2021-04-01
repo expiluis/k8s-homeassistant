@@ -1,0 +1,61 @@
+{
+    "version": 1,
+    "key": "auth",
+    "data": {
+        "users": [
+            {
+                "id": "7dc19f80718f4dd6af7f20f35571155b",
+                "group_ids": [
+                    "system-admin"
+                ],
+                "is_owner": true,
+                "is_active": true,
+                "name": "expiluis",
+                "system_generated": false
+            }
+        ],
+        "groups": [
+            {
+                "id": "system-admin",
+                "name": "Administrators"
+            },
+            {
+                "id": "system-users",
+                "name": "Users"
+            },
+            {
+                "id": "system-read-only",
+                "name": "Read Only"
+            }
+        ],
+        "credentials": [
+            {
+                "id": "59ff0fc7de9b4c099478f7b708e4f82c",
+                "user_id": "7dc19f80718f4dd6af7f20f35571155b",
+                "auth_provider_type": "homeassistant",
+                "auth_provider_id": null,
+                "data": {
+                    "username": "expiluis"
+                }
+            }
+        ],
+        "refresh_tokens": [
+            {
+                "id": "9aee1c7d09414d76a10711473bb4ea89",
+                "user_id": "7dc19f80718f4dd6af7f20f35571155b",
+                "client_id": "https://homeassistant.192.168.1.143.nip.io/",
+                "client_name": null,
+                "client_icon": null,
+                "token_type": "normal",
+                "created_at": "2021-03-31T10:13:41.121942+00:00",
+                "access_token_expiration": 1800.0,
+                "token": "bc18ce798abc03c1ba8fcb01f0aa784c85508935e7fcfbb445fec0aa83bc6604fe4f7c8a8430c8b897abe6fed9acc8d039be4d363985122eeb688a6247de2651",
+                "jwt_key": "2fa911155351c19eb05707146f210d68f873f33597f720c99563245f3c7af4a6e6fc7c7f7793368b831352c2ac23039db9f538c0ea1102257c6f82d450a3c267",
+                "last_used_at": "2021-03-31T14:04:38.359974+00:00",
+                "last_used_ip": "10.42.1.31",
+                "credential_id": "59ff0fc7de9b4c099478f7b708e4f82c",
+                "version": "2021.3.4"
+            }
+        ]
+    }
+}

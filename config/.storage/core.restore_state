@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "key": "core.restore_state",
+    "data": [
+        {
+            "state": {
+                "entity_id": "person.expiluis",
+                "state": "unknown",
+                "attributes": {
+                    "editable": false,
+                    "id": "expiluis",
+                    "user_id": "7dc19f80718f4dd6af7f20f35571155b",
+                    "friendly_name": "expiluis"
+                },
+                "last_changed": "2021-03-31T10:12:42.087616+00:00",
+                "last_updated": "2021-03-31T10:12:42.087616+00:00",
+                "context": {
+                    "id": "c00e692fda11c3d31b9de8f0132d1491",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-04-01T12:57:42.197143+00:00"
+        }
+    ]
+}

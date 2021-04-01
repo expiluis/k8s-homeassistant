@@ -1,0 +1,12 @@
+{
+    "version": 1,
+    "key": "auth_provider.homeassistant",
+    "data": {
+        "users": [
+            {
+                "username": "expiluis",
+                "password": "JDJiJDEyJFc5bURxMGdPLjFJVTRQU0VYdUlub2VCbGRDZ1FCZXNRMjV2SlRqUWJUbkxiRHI0ekh0UWZ5"
+            }
+        ]
+    }
+}
