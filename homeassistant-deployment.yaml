@@ -21,12 +21,12 @@ spec:
         emptyDir: {}
       initContainers:
       - name: clone
-        image: alpine/git:v2.30.1-arm64
+        image: arm64v8/alpine:3.13.4
         volumeMounts:
         - name: config
           mountPath: /config                
         command: ['/bin/sh', '-c']        
-        args: ['git clone https://github.com/expiluis/k8s-homeassistant && mv k8s-homeassistant/config/* /config']
+        args: ['apk update && apk add git && git clone https://github.com/expiluis/k8s-homeassistant && mv k8s-homeassistant/config/* /config']
       containers:
       - name: homeassistant
         image: homeassistant/raspberrypi4-homeassistant:2021.3.4
