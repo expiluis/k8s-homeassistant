@@ -16,16 +16,27 @@ spec:
       labels:
         app: homeassistant
     spec:
+      volumes:
+      - name: config
+        emptyDir: {}
+      initContainers:
+      - name: clone
+        image: alpine/git:1.0.4           
+        volumeMounts:
+        - name: config
+          mountPath: /config              
+        envFrom:
+          - configMapRef:
+              name: cfg                   
+        command: ['/bin/sh', '-c']        
+        args: ['git clone --branch $(version) https://github.com/expiluis/k8s-homeassistant && mv k8s-homeassistant/config/* /config']
       containers:
       - name: homeassistant
         image: homeassistant/raspberrypi4-homeassistant:2021.3.4
         ports:
         - containerPort: 8123
           name: http
-#        volumeMounts:
-#        - mountPath: /config
-#          name: config
-#      volumes:
-#        - name: config
-#          hostPath:
-#            path: config
+      volumes:
+        - name: config
+          mountPath: /config              
+          readOnly: true
