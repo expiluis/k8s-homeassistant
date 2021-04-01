@@ -24,12 +24,9 @@ spec:
         image: alpine/git:1.0.4           
         volumeMounts:
         - name: config
-          mountPath: /config
-        envFrom:
-          - configMapRef:
-              name: cfg                   
+          mountPath: /config                
         command: ['/bin/sh', '-c']        
-        args: ['git clone --branch $(version) https://github.com/expiluis/k8s-homeassistant && mv k8s-homeassistant/config/* /config']
+        args: ['git clone https://github.com/expiluis/k8s-homeassistant && mv k8s-homeassistant/config/* /config']
       containers:
       - name: homeassistant
         image: homeassistant/raspberrypi4-homeassistant:2021.3.4
