@@ -24,7 +24,7 @@ spec:
         image: alpine/git:1.0.4           
         volumeMounts:
         - name: config
-          mountPath: /config              
+          mountPath: /config
         envFrom:
           - configMapRef:
               name: cfg                   
@@ -36,7 +36,7 @@ spec:
         ports:
         - containerPort: 8123
           name: http
-      volumeMounts:
+        volumeMounts:
         - name: config
-          mountPath: /config              
+          mountPath: /config
           readOnly: true
