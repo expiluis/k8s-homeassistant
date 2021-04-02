@@ -22,7 +22,7 @@ spec:
 #      initContainers:
       containers:
       - name: clone
-        image: arm64v8/alpine:3.13.2
+        image: armhf/hello-world
         volumeMounts:
         - name: config
           mountPath: /config                
