@@ -21,7 +21,7 @@ spec:
         emptyDir: {}
 #      initContainers:
       containers:
-      - name: clone
+      - name: homeassistant
         image: armhf/hello-world
         volumeMounts:
         - name: config
