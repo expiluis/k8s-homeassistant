@@ -27,7 +27,7 @@ spec:
         - name: config
           mountPath: /config                
         command: ['/bin/sh', '-c']        
-        args: ['apk update && apk add git && git clone https://github.com/expiluis/k8s-homeassistant && mv k8s-homeassistant/config/* /config']
+        args: ['apk update && apk add git && git clone https://github.com/expiluis/k8s-homeassistant && mv k8s-homeassistant/config/* /config/']
 #      containers:
 #      - name: homeassistant
 #        image: homeassistant/raspberrypi4-homeassistant:2021.3.4
