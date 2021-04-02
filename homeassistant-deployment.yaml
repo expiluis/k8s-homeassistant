@@ -20,12 +20,12 @@ spec:
       - name: config
         emptyDir: {}
 #      initContainers:
-       containers:
-       - name: clone
-         image: alpine/git:1.0.26-arm64
-         volumeMounts:
-         - name: config
-           mountPath: /config                
+      containers:
+      - name: clone
+        image: alpine/git:1.0.26-arm64
+        volumeMounts:
+        - name: config
+          mountPath: /config                
 #        command: ['/bin/sh', '-c']        
 #        args: ['apk update && apk add git && git clone https://github.com/expiluis/k8s-homeassistant && mv k8s-homeassistant/config/* /config']
 #      containers:
