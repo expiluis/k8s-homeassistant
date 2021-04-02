@@ -22,7 +22,7 @@ spec:
 #      initContainers:
       containers:
       - name: clone
-        image: alpine/git:1.0.26-arm64
+        image: alpine:3.13.4
         volumeMounts:
         - name: config
           mountPath: /config                
