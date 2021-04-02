@@ -22,7 +22,7 @@ spec:
 #      initContainers:
       containers:
       - name: homeassistant
-        image: armhf/hello-world
+        image: alpine:3.13.4
         volumeMounts:
         - name: config
           mountPath: /config                
