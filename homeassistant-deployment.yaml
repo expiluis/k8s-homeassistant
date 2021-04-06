@@ -26,7 +26,7 @@ spec:
         - name: config
           mountPath: /config                
         command: ['/bin/sh', '-c']        
-        args: ['apk update && apk add git && git clone https://github.com/expiluis/k8s-homeassistant && cp -r k8s-homeassistant/config/* /config/ && rm -rf k8s-homeassistant']
+        args: ['apk update && apk add git && git clone https://github.com/expiluis/k8s-homeassistant && cp -r k8s-homeassistant/config/* /config/ && rm -rf k8s-homeassistant && echo "finished"']
 
       containers:
       - name: homeassistant
