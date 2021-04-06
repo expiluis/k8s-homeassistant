@@ -20,7 +20,7 @@ spec:
       - name: config
         emptyDir: {}
       initContainers:
-      - name: homeassistant
+      - name: clone
         image: alpine:3.13.4
         volumeMounts:
         - name: config
