@@ -19,8 +19,7 @@ spec:
       volumes:
       - name: config
         emptyDir: {}
-#      initContainers:
-      containers:
+      initContainers:
       - name: homeassistant
         image: alpine:3.13.4
         volumeMounts:
