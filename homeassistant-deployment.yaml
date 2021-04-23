@@ -30,7 +30,7 @@ spec:
 
       containers:
       - name: homeassistant
-        image: homeassistant/raspberrypi4-homeassistant:2021.3.4
+        image: homeassistant/raspberrypi4-homeassistant:2021.4.5
         ports:
         - containerPort: 8123
           name: http
