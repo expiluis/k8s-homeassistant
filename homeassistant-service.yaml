@@ -18,4 +18,3 @@ spec:
     targetPort: http
   selector:
     app: homeassistant
-
