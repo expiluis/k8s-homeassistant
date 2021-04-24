@@ -1,0 +1,35 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: esphome
+  name: esphome
+  namespace: homeassistant
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: esphome
+  template:
+    metadata:
+      labels:
+        app: esphome
+    spec:
+      hostNetwork: true
+      volumes:
+        - name: esphome-storage
+          nfs:
+            server: mnemosyne.arkane-systems.lan
+            path: "/swarm/harmony/homeassistant/esphome"
+      containers:
+        - image: esphome/esphome:1.16.2
+          name: esphome
+          env:
+            - name: ESPHOME_DASHBOARD_USE_PING
+              value: "true"
+            - name: ESPHOME_DASHBOARD_RELATIVE_URL
+              value: "/"
+          volumeMounts:
+            - mountPath: "/config"
+              name: esphome-storage
