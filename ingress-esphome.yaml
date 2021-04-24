@@ -1,21 +1,20 @@
 ---
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
 metadata:
-  name: esphome-ingress
+  name: esphome
   namespace: homeassistant
-  annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: 'websecure'
-    traefik.ingress.kubernetes.io/router.tls: 'true'
 spec:
-  rules:
-    - host: esphome.harmony.arkane-systems.lan
-      http:
-        paths:
-          - pathType: Prefix
-            path: /
-            backend:
-              service:
-                name: esphome
-                port:
-                  number: 6052
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`esphome.192.168.1.143.nip.io`)
+      priority: 10
+      services:
+        - name: esphome
+          port: 6052
+
+  tls:
+    certResolver: default
+    options: {}
