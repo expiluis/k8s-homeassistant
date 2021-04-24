@@ -8,6 +8,6 @@ spec:
   selector:
     app: esphome
   ports:
-    - protocol: TCP
+    - name: http
       port: 6052
-      name: http
+      targetPort: http
