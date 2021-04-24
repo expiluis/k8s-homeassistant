@@ -19,9 +19,9 @@ spec:
       hostNetwork: true
       volumes:
         - name: esphome-storage
-          nfs:
-            server: mnemosyne.arkane-systems.lan
-            path: "/swarm/harmony/homeassistant/esphome"
+#          nfs:
+#            server: mnemosyne.arkane-systems.lan
+#            path: "/swarm/harmony/homeassistant/esphome"
       containers:
         - image: esphome/esphome:1.16.2
           name: esphome
