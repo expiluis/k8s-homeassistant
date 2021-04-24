@@ -23,7 +23,7 @@ spec:
 #            server: mnemosyne.arkane-systems.lan
 #            path: "/swarm/harmony/homeassistant/esphome"
       containers:
-        - image: esphome/esphome-armv7:bb3d070
+        - image: esphome/esphome:1.16.2
           name: esphome
           env:
             - name: ESPHOME_DASHBOARD_USE_PING
