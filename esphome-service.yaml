@@ -9,8 +9,8 @@ metadata:
 spec:
   clusterIP: None
   ports:
-    - name: http
-      port: 6052
-      targetPort: http
+  - name: http
+    port: 6052
+    targetPort: http
   selector:
     app: esphome
