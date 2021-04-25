@@ -4,10 +4,12 @@ kind: Service
 metadata:
   name: esphome
   namespace: homeassistant
-spec:
-  selector:
+  labels:
     app: esphome
+spec:
   ports:
     - name: http
       port: 6052
       targetPort: http
+  selector:
+    app: esphome
