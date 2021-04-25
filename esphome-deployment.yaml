@@ -16,7 +16,6 @@ spec:
       labels:
         app: esphome
     spec:
-      hostNetwork: true
       volumes:
         - name: esphome-storage
 #          nfs:
