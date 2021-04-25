@@ -7,6 +7,7 @@ metadata:
   labels:
     app: esphome
 spec:
+  clusterIP: None
   ports:
     - name: http
       port: 6052
