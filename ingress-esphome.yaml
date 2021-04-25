@@ -3,8 +3,6 @@ kind: IngressRoute
 metadata:
   name: esphome
   namespace: homeassistant
-  labels:
-    app.kubernetes.io/instance: esphome
 spec:
   entryPoints:
     - websecure
