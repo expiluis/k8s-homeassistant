@@ -9,6 +9,7 @@ metadata:
 spec:
   ports:
   - name: http
+    protocol: TCP
     port: 6052
     targetPort: http
   selector:
