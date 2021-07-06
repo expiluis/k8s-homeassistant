@@ -12,4 +12,6 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 
 tplink:
-
+  discovery: false
+  switch:
+    - host: 192.168.1.134
