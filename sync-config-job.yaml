@@ -7,7 +7,7 @@ spec:
   template:
     spec:
       containers:
-        name: clone
+      - name: clone
         image: alpine:3.13.4
         volumeMounts:
         - name: config
