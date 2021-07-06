@@ -15,3 +15,28 @@ tplink:
   discovery: false
   switch:
     - host: 192.168.1.134
+
+
+sensor:
+  - platform: template
+    sensors:
+      my_tp_switch_amps:
+        friendly_name_template: "{{ state_attr('switch.enchufe','friendly_name') }} Current"
+        value_template: "{{ state_attr('switch.enchufe','current_a') }}"
+        unit_of_measurement: "A"
+      my_tp_switch_watts:
+        friendly_name_template: "{{ state_attr('switch.enchufe','friendly_name') }} Current Consumption"
+        value_template: "{{ state_attr('switch.enchufe','current_power_w') }}"
+        unit_of_measurement: "W"
+      my_tp_switch_total_kwh:
+        friendly_name_template: "{{ state_attr('switch.enchufe','friendly_name') }} Total Consumption"
+        value_template: "{{ state_attr('switch.enchufe','total_energy_kwh') }}"
+        unit_of_measurement: "kWh"
+      my_tp_switch_volts:
+        friendly_name_template: "{{ state_attr('switch.enchufe','friendly_name') }} Voltage"
+        value_template: "{{ state_attr('switch.enchufe','voltage') }}"
+        unit_of_measurement: "V"
+      my_tp_switch_today_kwh:
+        friendly_name_template: "{{ state_attr('switch.enchufe','friendly_name') }} Today's Consumption"
+        value_template: "{{ state_attr('switch.enchufe','today_energy_kwh') }}"
+        unit_of_measurement: "kWh"
