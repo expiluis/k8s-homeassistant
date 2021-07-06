@@ -6,6 +6,8 @@ metadata:
 spec:
   template:
     spec:
+      volumes:
+      - name: config
       containers:
       - name: clone
         image: alpine:3.13.4
