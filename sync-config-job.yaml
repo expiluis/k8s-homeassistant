@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: sync-config
+  namespace: homeassistant
+spec:
+  template:
+    spec:
+      containers:
+        name: clone
+        image: alpine:3.13.4
+        volumeMounts:
+        - name: config
+          mountPath: /config                
+        command: ['/bin/sh', '-c']        
+        args: ['apk update && apk add git && git clone https://github.com/expiluis/k8s-homeassistant && mv k8s-homeassistant/config/* /config/ && echo "finished"']
+      restartPolicy: Never
+  backoffLimit: 4
+ 
+ 
+
