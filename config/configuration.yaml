@@ -40,4 +40,3 @@ sensor:
         value_template: "{{ state_attr('switch.enchufe','today_energy_kwh') }}"
         unit_of_measurement: "kWh"
 
-esphome:
