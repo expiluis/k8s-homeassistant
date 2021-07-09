@@ -40,3 +40,42 @@ sensor:
         value_template: "{{ state_attr('switch.enchufe','today_energy_kwh') }}"
         unit_of_measurement: "kWh"
 
+localtuya:
+  - host: 192.168.1.153
+    device_id: 50134218c4dd571b0a23
+    local_key: 1ef49e1a7515d00d
+    friendly_name: smart power strip
+    protocol_version: "3.3"
+    entities:
+      - platform: binary_sensor
+        friendly_name: Plug Status
+        id: 1
+        device_class: power
+        state_on: "true" # Optional
+        state_off: "false" # Optional
+
+      - platform: sensor
+        friendly_name: Plug Voltage
+        id: 20
+        scaling: 0.1 # Optional
+        device_class: voltage # Optional
+        unit_of_measurement: "V" # Optional
+
+      - platform: switch_1
+        friendly_name: Plug
+        id: 1
+      - platform: switch_2
+        friendly_name: Plug
+        id: 2
+      - platform: switch_3
+        friendly_name: Plug
+        id: 3
+      - platform: switch_4
+        friendly_name: Plug
+        id: 4
+      - platform: switch_usb
+        friendly_name: Plug
+        id: 7
+      - platform: switch_all
+        friendly_name: Plug
+        id: 38
