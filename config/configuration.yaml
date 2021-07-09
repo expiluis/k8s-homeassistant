@@ -61,21 +61,21 @@ localtuya:
         device_class: voltage # Optional
         unit_of_measurement: "V" # Optional
 
-      - platform: switch_1
-        friendly_name: Plug
+      - platform: switch
+        friendly_name: switch_1
         id: 1
-      - platform: switch_2
-        friendly_name: Plug
+      - platform: switch
+        friendly_name: switch_2
         id: 2
-      - platform: switch_3
-        friendly_name: Plug
+      - platform: switch
+        friendly_name: switch_3
         id: 3
-      - platform: switch_4
-        friendly_name: Plug
+      - platform: switch
+        friendly_name: switch_4
         id: 4
-      - platform: switch_usb
-        friendly_name: Plug
+      - platform: switch
+        friendly_name: switch_usb
         id: 7
-      - platform: switch_all
-        friendly_name: Plug
+      - platform: switch
+        friendly_name: switch_all
         id: 38
