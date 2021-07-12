@@ -15,6 +15,7 @@ tplink:
   discovery: false
   switch:
     - host: 192.168.1.134
+    - host: 192.168.1.155
 
 sensor:
   - platform: template
